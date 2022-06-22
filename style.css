@@ -1,0 +1,635 @@
+html {
+    background-color: rgb(0, 6, 85);
+    overflow-x: hidden;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 1vw;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px yellowgreen; 
+    border-radius: 0.5vw;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 0.5vw;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: orange;
+  }
+  
+  img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  
+  p {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  
+  .iconclass {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    top: 3vh;
+    transition: top 1s;
+  }
+  
+  .iconclass:hover {
+    top: 2vh;
+  }
+  
+  #github {
+    left: 94vw;
+  }
+  
+  #email {
+    left: 89vw;
+  }
+  
+  #replit {
+    left: 84vw;
+    animation: replitspin 1s infinite linear;
+  }
+  
+  #discord {
+    left: 79vw;
+  }
+  
+  #spotify {
+    left: 74vw;
+  }
+  
+  #tetr {
+    left: 69vw;
+  }
+  
+  #surviv {
+    left: 64vw;
+  }
+  
+  #instagram {
+    left: 59vw;
+  }
+  
+  @keyframes replitspin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(359deg);}
+  }
+  
+  #pfp {
+    width: 0vh;
+    height: 0vh;
+    position: absolute;
+    left: calc(50vw - 15vh);
+    top: 15vh;
+    border-radius: 50%;
+    border: 1vh solid green;
+  }
+  
+  #break1 {
+    border-left: 100vw solid rgb(21, 110, 70);;
+    height: 0.5vh;
+    position: absolute;
+    left: 0vw;
+    top: 100vh;
+  }
+  
+  #hello {
+    font-family: 'Anton', sans-serif;
+    color: rgb(255, 0, 0);
+    font-size: 5.5vw;
+    position: absolute;
+    top: 40vh;
+    text-align: center;
+    animation: helloanim 3s linear;
+  }
+  
+  @keyframes helloanim {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  #about {
+    position: absolute;
+    top: 110vh;
+  }
+  
+  #name {
+    color: aqua;
+    font-family: 'Merriweather', serif;
+  }
+  
+  #textaboutbackground {
+    position: absolute;
+    top: 0vh;
+    left: 10vw;
+    height: 0vh;
+    width: 0vw;
+    background-color: rgb(0, 19, 128);
+    border-radius: 32px;
+    box-shadow: 0.5vh 0.5vh black;
+    transition: box-shadow 0.7s;
+  }
+  
+  #textaboutbackground:hover {
+    box-shadow: 2.5vh 2.5vh black;
+    cursor: pointer;
+  }
+  
+  #textabout {
+    position: absolute;
+    color: red;
+    font-family: 'Merriweather', serif;
+    font-size: 3vw;
+    top: 0vw;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+    pointer-events: none;
+  }
+  
+  #scrolldown1 {
+    border-radius: 50%;
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    top: 80vh;
+    left: calc(50vw - 5vh);
+    transition: background-color 0.7s;
+  }
+  
+  #scrolldown1:hover {
+    cursor: pointer;
+    background-color: rgb(255, 115, 0);
+  }
+  
+  #break2 {
+    border-left: 100vw solid rgb(21, 110, 70);;
+    height: 0.5vh;
+    position: absolute;
+    left: 0vw;
+    top: 200vh;
+  }
+  
+  #languages {
+    position: absolute;
+    top: 210vh;
+  }
+  
+  #languagehead {
+    opacity: 0;
+    color: red;
+    font-family: 'Merriweather', serif;
+    position: relative;
+    text-align: center;
+    font-size: 5vw;
+  }
+  
+  #beginner {
+    font-family: 'Press Start 2P', cursive;
+    color: yellow;
+    position: absolute;
+    top: 25vh;
+    left: 3vw;
+    opacity: 0;
+  }
+  
+  #expert {
+    font-family: 'Press Start 2P', cursive;
+    color: red;
+    position: absolute;
+    top: 28vh;
+    left: 90vw;
+    opacity: 0;
+  }
+  
+  .langclass {
+    width: 10vh;
+    height: 10vh;
+    position: absolute;
+    left: -11vh;
+    transition: top 1s;
+  }
+  
+  #cpp {
+    top: 30vh;
+  }
+  
+  #cpp:hover {
+    top: 29vh;
+  }
+  
+  #python {
+    top: 45vh;
+  }
+  
+  #python:hover {
+    top: 44vh;
+  }
+  
+  #html {
+    top: 60vh;
+  }
+  
+  #html:hover {
+    top: 59vh;
+  }
+  
+  #css {
+    top: 75vh;
+  }
+  
+  #css:hover {
+    top: 74vh;
+  }
+  
+  #js {
+    top: 90vh;
+  }
+  
+  #js:hover {
+    top: 89vh;
+  }
+  
+  #ahk {
+    top: 105vh;
+  }
+  
+  #ahk:hover {
+    top: 104vh;
+  }
+  
+  #jquery {
+    top: 120vh;
+  }
+  
+  #jquery:hover {
+    top: 119vh;
+  }
+  
+  #babylon {
+    top: 135vh;
+  }
+  
+  #babylon:hover {
+    top: 134vh;
+  }
+  
+  #socket {
+    top: 150vh;
+  }
+  
+  #socket:hover {
+    top: 149vh;
+  }
+  
+  #react {
+    top: 165vh;
+  }
+  
+  #react:hover {
+    top: 164vh;
+  }
+  
+  .langrotate {
+    animation: rotatelang 0.4s linear;
+  }
+  
+  .langprogress {
+    width: 0vw;
+    height: 6vh;
+    position: absolute;
+    left: calc(3vw + 10vh);
+  }
+  
+  .langproganimating {
+    animation: langprogresswidth 3s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+  
+  @keyframes langprogresswidth {
+    0% {width: 0vw;}
+    100% {width: calc(87vw - 10vh);}
+  }
+  
+  #progcpp {
+    top: 32vh;
+  }
+  
+  #progpython {
+    top: 47vh;
+  }
+  
+  #proghtml {
+    top: 62vh;
+  }
+  
+  #progcss {
+    top: 77vh;
+  }
+  
+  #progjs {
+    top: 92vh;
+  }
+  
+  #progahk {
+    top: 107vh;
+  }
+  
+  #progjquery {
+    top: 122vh;
+  }
+  
+  #progbabylon {
+    top: 137vh;
+  }
+  
+  #progsocket {
+    top: 152vh;
+  }
+  
+  #progreact {
+    top: 167vh;
+  }
+  
+  #break3 {
+    border-left: 100vw solid rgb(21, 110, 70);;
+    height: 0.5vh;
+    position: absolute;
+    left: 0vw;
+    top: 400vh;
+  }
+  
+  @keyframes rotatelang {
+    0% {transform: rotate(359deg);}
+    100% {transform: rotate(0deg);}
+  }
+  
+  
+  #projects {
+    position: absolute;
+    top: 400vh;
+    width: 100%;
+  }
+  
+  #projectshead {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 5vmax;
+    color: red;
+    opacity: 0;
+  }
+  
+  .projectimgs {
+    position: absolute;
+    top: 25vmin;
+    width: 90vmin;
+    height: 50vmin;
+    left: calc(50vw - 45vmin);
+    border-radius: 10%/18%;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  #rotateproj1, #rotateproj2 {
+    border-radius: 50%;
+    width: 5vmin;
+    height: 5vmin;
+    border: none;
+    background-color: #0084ff;
+    opacity: 0.7;
+    position: absolute;
+    transition: opacity 1s;
+    font-size: 3vmin;
+    margin: 0px;
+    top: calc(50vh - 2.5vmin);
+    transition: box-shadow 0.2s, top 0.2s;
+    box-shadow: 0px 0.8vmin #36bfff;
+  }
+  
+  #rotateproj1 {
+    left: calc(50vw - 55vmin);
+  }
+  
+  #rotateproj2 {
+    left: calc(50vw + 50vmin);
+  }
+  
+  #rotateproj1:hover, #rotateproj2:hover {
+    cursor: pointer;
+    box-shadow: 0px 0.4vmin #36bfff;
+    top: calc(50vh - 2.1vmin);
+  }
+  
+  #rotateproj1:active, #rotateproj2:active {
+    box-shadow: 0px 0vmin #36bfff;
+    top: calc(50vh - 1.7vmin);
+  }
+  
+  .movebottomprojimg {
+    animation: movebottomprojimg 3s linear forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes movebottomprojimg {
+    0% {z-index:1000;}
+    50% {
+      left: calc(50vw - 135vmin);
+      z-index:-1;
+    }
+    100% {left: calc(50vw - 45vmin);z-index:-1;}
+  }
+  
+  .movetopprojimg {
+    animation: movetopprojimg 3s linear forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes movetopprojimg {
+    0% {z-index:-1;}
+    50% {
+      left: calc(50vw + 45vmin);
+      z-index:1000;
+    }
+    100% {left: calc(50vw - 45vmin);z-index: 1000;}
+  }
+  
+  #demobtn {
+    position: absolute;
+    width: 5vw;
+    height: 5vh;
+    left: 40vw;
+    top: 85vh;
+    border: none;
+    background-color: #0084ff;
+    box-shadow: 0px 1vh #36bfff;
+    border-radius: 8px;
+    transition: box-shadow 0.2s, top 0.2s;
+    color: white;
+    font-size: calc(1vw + 1vh);
+    opacity: 0;
+  }
+  
+  #demobtn:hover {
+    box-shadow: 0px 0.5vh #36bfff;
+    top: 85.5vh;
+    cursor: pointer;
+  }
+  
+  #demobtn:active {
+    box-shadow: 0px 0px #36bfff;
+    top: 86vh;
+  }
+  
+  #codebtn {
+    position: absolute;
+    width: 5vw;
+    height: 5vh;
+    left: 55vw;
+    top: 85vh;
+    border: none;
+    background-color: #0084ff;
+    box-shadow: 0px 1vh #36bfff;
+    border-radius: 8px;
+    transition: box-shadow 0.2s, top 0.2s;
+    color: white;
+    font-size: calc(1vw + 1vh);
+    opacity: 0;
+  }
+  
+  #codebtn:hover {
+    box-shadow: 0px 0.5vh #36bfff;
+    top: 85.5vh;
+    cursor: pointer;
+  }
+  
+  #codebtn:active {
+    box-shadow: 0px 0px #36bfff;
+    top: 86vh;
+  }
+  
+  #break4 {
+    border-left: 100vw solid rgb(21, 110, 70);;
+    height: 0.5vh;
+    position: absolute;
+    left: 0vw;
+    top: 500vh;
+  }
+  
+  #hobbies {
+    position: absolute;
+    top: 510vh;
+    width: 100%;
+  }
+  
+  .racket {
+    top: 5vmin;
+    width: 30vmin;
+    height: 30vmin;
+    position: absolute;
+    transform-origin: bottom;
+    transform: rotate(-45deg);
+  }
+
+  #racket1 {
+    left: 10vw;
+  }
+  
+  @keyframes racket1 {
+    0%{transform: rotate(-45deg)}
+    100%{transform: rotate(45deg)}
+  }
+
+  @keyframes racket2 {
+    0% {transform: rotate(45deg)}
+    100%{transform: rotate(-45deg)}
+  }
+
+  #racket2 {
+    left: 80vw;
+    animation: racket2 2s linear infinite;
+  }
+
+  #shuttle {
+      width: 8vmin;
+      height: 5.3vmin;
+      position: absolute;
+      left: calc(10vw + 28vmin);
+      top: 10vmin;
+      transform: rotate(180deg);
+      animation: shuttleX 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes shuttleX {
+    to {left: 80vw;transform:rotate(0deg);}
+  }
+
+  #hobbytitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-family: 'Merriweather', serif;
+    font-size: 5vw;
+  }
+
+  #jspianofork {
+    position: absolute;
+    left: 100vw;
+    top: 40vh;
+    width: 80vmax;
+    height: 20vmax;
+    border: none;
+  }
+
+  .animatehobbytitle {
+    animation: animatehobbytitle 2s cubic-bezier(.44,1.5,.85,1.43);
+  }
+
+  @keyframes animatehobbytitle {
+    50% {transform: rotate(179deg);}
+    100% {transform: rotate(359deg);}
+  }
+  
+  #chesspiece {
+    position: absolute;
+    width:70vw;
+    height:70vh;
+    left: -70vw;
+    top: calc(40vh + 30vmax);
+    border: none;
+  }
+
+  #musicnote {
+    position: absolute;
+    width: 20vmin;
+    height: 20vmin;
+    left: 100vw;
+    opacity: 0;
+    top: calc(40vh + 30vmax + 70vh + 10vmin);
+    animation-fill-mode: forwards;
+  }
+
+  .animatenote {
+    animation: animatemusicnote 2s linear;
+  }
+
+  @keyframes animatemusicnote {
+    100% {
+      opacity: 1;
+      left: calc(50vw - 10vmin);
+      transform: rotate(359deg);
+    }
+  }

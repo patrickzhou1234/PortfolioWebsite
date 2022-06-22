@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Patrick Zhou</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body onload="onloadanimations()">
+    <div id="home">
+      <a href="https://www.instagram.com/moistnugget_p4tricx/" target="_blank"><img title="Instagram" class="iconclass" id="instagram" src="https://cdn-icons-png.flaticon.com/512/174/174855.png"></a>
+      <a href="mailto:patrickchang44543@gmail.com"><img title="Email" class="iconclass" id="email" src="https://rb.gy/ghvzep"></a>
+      <a href="https://github.com/patrickzhou1234" target="_blank"><img title="Github" class="iconclass" id="github" src="https://rb.gy/ycuqxu"></a>
+      <a href="https://replit.com/@pzrepl/" target="_blank"><img title="Replit" class="iconclass" id="replit" src="https://rb.gy/z4ebrt"></a>
+      <img id="pfp" src="pfp.JPG">
+      <a href="https://discord.com/users/726151990228549705" target="_blank"><img title="Discord" class="iconclass" id="discord" src="https://i.imgur.com/omkJR7W.png"></a>
+      <a href="https://open.spotify.com/user/4yjee9wsgz68sav1b0imzd6u5" target="_blank"><img title="Spotify" class="iconclass" id="spotify" src="https://i.imgur.com/WxuzFcW.png"></a>
+      <a href="https://ch.tetr.io/u/moist_nugget123" target="_blank"><img title="Tetr.io" class="iconclass" id="tetr" src="https://i.imgur.com/D2L3Art.png"></a>
+      <a href="https://surviv.io/stats/mosin-nagant1" target="_blank"><img title="Surviv.io" class="iconclass" id="surviv" src="https://surviv.io/favicon.ico"></a>
+      <p id="hello">Hello There! I am <strong id="name">Patrick Zhou!</strong> Let's meet.</p>
+      <img id="scrolldown1" onclick="scrolldown1()" src="https://rb.gy/g86u45">
+    </div>
+    <vl id="break1"></vl>
+    <div id="about">
+      <div id="textaboutbackground"></div>
+      <p id="textabout">Hi this is the about me section. </p>
+    </div>
+    <vl id="break2"></vl>
+    <div id="languages">
+      <p id="languagehead">Languages and frameworks I use:</p>
+      <p id="beginner">Beginner</p>
+      <p id="expert">Expert</p>
+      <a href="https://cplusplus.com" target="_blank"><img title="C++" id="cpp" class="langclass" src="https://rb.gy/4tkppa"></a>
+      <progress class="langprogress" id="progcpp" value="2.5" max="5"></progress>
+      <a href="https://python.org" target="_blank"><img title="Python" id="python" class="langclass" src="https://rb.gy/db5nho"></a>
+      <progress class="langprogress" id="progpython" value="2" max="5"></progress>
+      <a href="https://html.com" target="_blank"><img title="HTML" id="html" class="langclass" src="https://rb.gy/5q7scb"></a>
+      <progress class="langprogress" id="proghtml" value="4" max="5"></progress>
+      <a href="https://css-tricks.com" target="_blank"><img title="CSS" id="css" class="langclass" src="https://rb.gy/wvtfja"></a>
+      <progress class="langprogress" id="progcss" value="3" max="5"></progress>
+      <a href="https://javascript.info/" target="_blank"><img title="JavaScript" id="js" class="langclass" src="https://rb.gy/ddsego"></a>
+      <progress class="langprogress" id="progjs" value="4" max="5"></progress>
+      <a href="https://autohotkey.com" target="_blank"><img title="AutoHotkey" id="ahk" class="langclass" src="https://rb.gy/dhaq1c"></a>
+      <progress class="langprogress" id="progahk" value="4" max="5"></progress>
+      <a href="https://jquery.com" target="_blank"><img title="JQuery" id="jquery" class="langclass" src="https://rb.gy/wajmjv"></a>
+      <progress class="langprogress" id="progjquery" value="4" max="5"></progress>
+      <a href="https://www.babylonjs.com/" target="_blank"><img title="Babylon.js" id="babylon" class="langclass" src="https://rb.gy/ndj4lp"></a>
+      <progress class="langprogress" id="progbabylon" value="2" max="5"></progress>
+      <a href="https://socket.io/" target="_blank"><img title="Socket.io" id="socket" class="langclass" src="https://i.imgur.com/b3NqY04.png"></a>
+      <progress class="langprogress" id="progsocket" value="3" max="5"></progress>
+      <a href="https://reactjs.org/" target="_blank"><img title="React.js" id="react" class="langclass" src="https://i.imgur.com/PqsY8cr.png"></a>
+      <progress class="langprogress" id="progreact" value="2" max="5"></progress>
+    </div>
+    <vl id="break3"></vl>
+    <div id="projects">
+       <p id="projectshead">My Projects</p>
+       <button id="rotateproj1" onclick="rotateprojects(this.id)">&lt;</button>
+       <button id="rotateproj2" onclick="rotateprojects(this.id)">&gt;</button>
+      <img class="projectimgs" src="https://i.imgur.com/o4b8VPq.png">
+        <img class="projectimgs" src="https://i.imgur.com/P5a595K.png">
+       <img class="projectimgs" src="https://i.imgur.com/wbL4skx.png">
+       <img class="projectimgs" src="https://i.imgur.com/BW6HY8m.png">
+       <img class="projectimgs" src="https://i.imgur.com/E5QzZss.png">
+       <img class="projectimgs" src="https://i.imgur.com/hbC275j.png">
+       <img class="projectimgs" src="https://i.imgur.com/3mlh2BL.png">
+       <img class="projectimgs" src="https://i.imgur.com/IOND6hP.png">
+       <img class="projectimgs" src="https://i.imgur.com/6cnpw1I.png">
+       <img class="projectimgs" src="https://i.imgur.com/0iSf2l3.png">
+       <img class="projectimgs" src="https://i.imgur.com/ikqaDoD.png">
+       <img class="projectimgs" src="https://i.imgur.com/mgz3agN.png">
+       <img class="projectimgs" src="https://i.imgur.com/OdGc53h.png">
+       <img class="projectimgs" src="https://i.imgur.com/XBhqLqd.png">
+       <img class="projectimgs" src="https://i.imgur.com/aBIWVFL.png">
+       <img class="projectimgs" src="https://i.imgur.com/h2QUo2L.png">
+       <img class="projectimgs" src="https://i.imgur.com/khhwTgb.png">
+        <img class="projectimgs" src="https://i.imgur.com/FIi4G2x.png">
+        <a id="demoLink" target="_blank" href="https://moistplayerwithupload.pzrepl.repl.co/"><button id="demobtn">demo</button></a>
+        <a id="codeLink" target="_blank" href="https://github.com/patrickzhou1234/MoistPlayerUpload"><button id="codebtn">code</button></a>
+    </div>
+    <vl id="break4"></vl>
+    <div id="hobbies">
+      <span id="hobbytitle">Hobbies</span>
+      <img class="racket" id="racket1" src="https://i.imgur.com/XEzwzpQ.png">
+      <img class="racket" id="racket2" src="https://i.imgur.com/XEzwzpQ.png">
+      <img id="shuttle" src="https://rb.gy/b6xry9">
+      <iframe id="jspianofork" src="https://patrickzhou1234.github.io/JSpianoFORK/"></iframe>
+      <iframe id="chesspiece" src="https://patrickzhou1234.github.io/babylonjsmeshhoster/chessboard/"></iframe>
+      <img id="musicnote" src="https://i.imgur.com/8ttRRVN.png">
+      <button id="test" style="position: absolute;top: 900vh;">scrollenable</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
