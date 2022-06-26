@@ -618,12 +618,19 @@ html {
     height: 20vmin;
     left: 100vw;
     opacity: 0;
-    top: calc(40vh + 30vmax + 70vh + 10vmin);
+    top: calc(110vh + 30vmax + 10vmin);
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
   }
 
   .animatenote {
     animation: animatemusicnote 2s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  .pumpnote {
+    animation: musicnotepumping 2s ease-in-out infinite;
   }
 
   @keyframes animatemusicnote {
@@ -632,4 +639,24 @@ html {
       left: calc(50vw - 10vmin);
       transform: rotate(359deg);
     }
+  }
+
+  @keyframes musicnotepumping {
+    0% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
+
+  #visualizervid {
+    position: absolute;
+    width: 80vw;
+    height: 20vh;
+    left: 10vw;
+    top: calc(110vh + 30vmax + 30vmin);
   }

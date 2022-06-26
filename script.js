@@ -5,6 +5,7 @@ projimgs[0].style.left = 100+"vw";
 projimgs[1].style.left = -90+"vmin";
 
 racket = document.getElementById("racket");
+musicnote = document.getElementById("musicnote");
 
 function onloadanimations() {
   $("#pfp").animate({
@@ -132,8 +133,14 @@ window.addEventListener("scroll", function() {
       left: 15+'vw'
     }, 4000);
   }
-  if (pageYOffset > document.getElementById("break4").offsetTop+document.getElementById("musicnote").offsetTop-window.innerHeight) {
-    document.getElementById("musicnote").classList.add("animatenote");
+  if (pageYOffset > document.getElementById("break4").offsetTop+musicnote.offsetTop-window.innerHeight) {
+    musicnote.classList.add("animatenote");
+    setTimeout(function() {
+      musicnote.classList.remove("animatenote");
+      musicnote.style.left = "calc(50vw - 10vmin)";
+      musicnote.style.opacity = 1;
+      musicnote.classList.add("pumpnote");
+    }, 2000);
   }
 })
 
