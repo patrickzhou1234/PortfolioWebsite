@@ -47,6 +47,7 @@ html {
   
   .iconclass:hover {
     top: 2vh;
+    cursor: pointer;
   }
   
   #github {
@@ -80,6 +81,14 @@ html {
   
   #instagram {
     left: 59vw;
+  }
+
+  #steam {
+    left: 54vw;
+  }
+
+  #valorant {
+    left: 49vw;
   }
   
   @keyframes replitspin {

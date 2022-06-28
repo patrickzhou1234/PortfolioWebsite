@@ -195,3 +195,12 @@ function rotateprojects(clicked) {
 setTimeout(function() {
   document.getElementById("racket1").style.animation = "racket1 2s linear infinite";
 }, 500)
+
+document.getElementById("valorant").onclick = function() {
+  navigator.clipboard.writeText("moistnugget #2264");
+  Swal.fire(
+    'Done!',
+    'You copied my valorant ID.',
+    'success'
+  )
+}
