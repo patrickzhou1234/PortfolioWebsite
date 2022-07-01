@@ -198,9 +198,36 @@ setTimeout(function() {
 
 document.getElementById("valorant").onclick = function() {
   navigator.clipboard.writeText("moistnugget #2264");
-  Swal.fire(
-    'Done!',
-    'You copied my valorant ID.',
-    'success'
-  )
+  Swal.fire({
+    title: 'Done!',
+    text: 'You copied my valorant ID (moistnugget #2264).',
+    icon: 'success',
+    background: 'black',
+    color: 'white'
+  })
+}
+
+function linkspotify() {
+  Swal.fire({
+    title: 'Spotify',
+    text: 'Username: Patrick Z',
+    imageUrl: 'https://i.imgur.com/WxuzFcW.png',
+    imageWidth: 200,
+    imageHeight: 200,
+    imageAlt: 'Custom image',
+    showCloseButton: true,
+    showCancelButton: true,
+    focusConfirm: false,
+    background: "black",
+    color: "white",
+    confirmButtonText:
+    'Visit!',
+    confirmButtonAriaLabel: 'Visit my spotify',
+    cancelButtonText: 'Cancel',
+    cancelButtonAriaLabel: 'Cancel'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.open("https://open.spotify.com/user/4yjee9wsgz68sav1b0imzd6u5", '_blank').focus();
+    }
+  })
 }
