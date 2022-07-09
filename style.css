@@ -690,3 +690,15 @@ html {
       transform: scale(0.8);
     }
   }
+
+  #fakeconsole {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    left: 25vw;
+    top: calc(140vh + 30vmax + 10vmin);
+  }
+
+  #fakeconsole:focus {
+    outline: none;
+  }

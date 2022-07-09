@@ -1,5 +1,8 @@
 projimgs = document.getElementsByClassName("projectimgs");
 shuttle = document.getElementById("shuttle");
+fakeconsole = document.getElementById("fakeconsole");
+typecount = 0;
+cursorbool = true;
 projimgs[0].style.zIndex = 998;
 projimgs[0].style.left = 100+"vw";
 projimgs[1].style.left = -90+"vmin";
@@ -142,6 +145,9 @@ window.addEventListener("scroll", function() {
       musicnote.classList.add("pumpnote");
     }, 2000);
   }
+  if (pageYOffset > document.getElementById("break4").offsetTop+fakeconsole.offsetTop-window.innerHeight) {
+    codeconsole();
+  }
 })
 
 function scrolldown1() {
@@ -230,4 +236,58 @@ function linkspotify() {
       window.open("https://open.spotify.com/user/4yjee9wsgz68sav1b0imzd6u5", '_blank').focus();
     }
   })
+}
+
+blinkcount = 0;
+
+function codeconsole() {
+  content = "document.getElementById('console').style.backgroundColor='black';";
+    consolerender = ">|";
+    typewriter = setInterval(function() {
+      if (typecount<content.length) {
+        consolerender = consolerender.slice(0,-1);
+        consolerender+=content[typecount]+"|";
+        fakeconsole.innerHTML=consolerender;
+        typecount++;
+      } else {
+        clearInterval(typewriter);
+        consolerender = consolerender.slice(0, -1);
+        consolerender+="\n";
+        consolerender+=">";
+        consolerender+="|";
+        fakeconsole.style.backgroundColor = "black";
+        fakeconsole.style.color="white";
+        blinkint = setInterval(function() {
+          blinkcount++;
+          if (cursorbool) {
+            consolerender = consolerender.slice(0, -1);
+            cursorbool = false;
+          } else {
+            if (blinkcount==10) {
+              typecount = 0;
+              content = "document.getElementById('console').style.fontSize = 1+'vw';";
+              typewriter2 = setInterval(function() {
+                if (typecount<content.length) {
+                  consolerender = consolerender.slice(0,-1);
+                  consolerender+=content[typecount]+"|";
+                  fakeconsole.innerHTML=consolerender;
+                  typecount++;
+                } else {
+                  clearInterval(typewriter2);
+                  consolerender = consolerender.slice(0, -1);
+                  consolerender+="\n";
+                  consolerender+=">";
+                  consolerender+="|";
+                  fakeconsole.style.fontSize = 1+'vw';
+                }
+              }, 50)
+              clearInterval(blinkint);
+            }
+            consolerender+="|";
+            cursorbool = true;
+          }
+          fakeconsole.innerHTML=consolerender;
+        }, 500);
+      }
+    }, 50);
 }
