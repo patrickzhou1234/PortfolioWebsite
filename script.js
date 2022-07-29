@@ -147,7 +147,7 @@ window.addEventListener("scroll", function() {
       musicnote.classList.add("pumpnote");
     }, 2000);
   }
-  if (pageYOffset > document.getElementById("break4").offsetTop+fakeconsole.offsetTop-window.innerHeight) {
+  if (pageYOffset > document.getElementById("break4").offsetTop+consoleoutside.offsetTop-window.innerHeight) {
     if (consolebool) {
       codeconsole();
       consolebool = false;

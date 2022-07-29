@@ -705,3 +705,11 @@ html {
   #consoleoutside:focus {
     outline: none;
   }
+
+  #break5 {
+    border-left: 100vw solid rgb(21, 110, 70);;
+    height: 0.5vh;
+    position: absolute;
+    left: 0vw;
+    top: calc(710vh + 30vmax + 10vmin);
+  }
