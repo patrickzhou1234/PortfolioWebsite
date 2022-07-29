@@ -1,8 +1,10 @@
 projimgs = document.getElementsByClassName("projectimgs");
 shuttle = document.getElementById("shuttle");
 fakeconsole = document.getElementById("fakeconsole");
+consoleoutside = document.getElementById("consoleoutside");
+consolebool = true;
 typecount = 0;
-cursorbool = true;
+cursor = document.getElementById("cursor");
 projimgs[0].style.zIndex = 998;
 projimgs[0].style.left = 100+"vw";
 projimgs[1].style.left = -90+"vmin";
@@ -146,7 +148,10 @@ window.addEventListener("scroll", function() {
     }, 2000);
   }
   if (pageYOffset > document.getElementById("break4").offsetTop+fakeconsole.offsetTop-window.innerHeight) {
-    codeconsole();
+    if (consolebool) {
+      codeconsole();
+      consolebool = false;
+    }
   }
 })
 
@@ -241,53 +246,88 @@ function linkspotify() {
 blinkcount = 0;
 
 function codeconsole() {
-  content = "document.getElementById('console').style.backgroundColor='black';";
-    consolerender = ">|";
+    content = "document.getElementById('console').style.backgroundColor='black';";
     typewriter = setInterval(function() {
       if (typecount<content.length) {
-        consolerender = consolerender.slice(0,-1);
-        consolerender+=content[typecount]+"|";
-        fakeconsole.innerHTML=consolerender;
+        fakeconsole.innerHTML+=content[typecount];
         typecount++;
       } else {
         clearInterval(typewriter);
-        consolerender = consolerender.slice(0, -1);
-        consolerender+="\n";
-        consolerender+=">";
-        consolerender+="|";
-        fakeconsole.style.backgroundColor = "black";
-        fakeconsole.style.color="white";
-        blinkint = setInterval(function() {
-          blinkcount++;
-          if (cursorbool) {
-            consolerender = consolerender.slice(0, -1);
-            cursorbool = false;
+        fakeconsole.innerHTML+="<br>>";
+        consoleoutside.style.backgroundColor = "black";
+        consoleoutside.style.color="white";
+        content = "document.getElementById('console').style.fontSize = 1+'vw'";
+        typecount = 0;
+        typewriter2 = setInterval(function() {
+          if (typecount<content.length) {
+            fakeconsole.innerHTML+=content[typecount];
+            typecount++;
           } else {
-            if (blinkcount==10) {
-              typecount = 0;
-              content = "document.getElementById('console').style.fontSize = 1+'vw';";
-              typewriter2 = setInterval(function() {
-                if (typecount<content.length) {
-                  consolerender = consolerender.slice(0,-1);
-                  consolerender+=content[typecount]+"|";
-                  fakeconsole.innerHTML=consolerender;
-                  typecount++;
-                } else {
-                  clearInterval(typewriter2);
-                  consolerender = consolerender.slice(0, -1);
-                  consolerender+="\n";
-                  consolerender+=">";
-                  consolerender+="|";
-                  fakeconsole.style.fontSize = 1+'vw';
-                }
-              }, 50)
-              clearInterval(blinkint);
-            }
-            consolerender+="|";
-            cursorbool = true;
+            clearInterval(typewriter2);
+            fakeconsole.innerHTML+="<br>>";
+            consoleoutside.style.fontSize = 1+'vw';
+            content = "document.getElementById('console').style.scale = 2;";
+            typecount = 0;
+            typewriter3 = setInterval(function() {
+              if (typecount<content.length) {
+                fakeconsole.innerHTML+=content[typecount];
+                typecount++;
+              } else {
+                clearInterval(typewriter3);
+                fakeconsole.innerHTML+="<br>>";
+                consoleoutside.style.left = 2+"vw";
+                consoleoutside.style.width = 95+"vw";
+                content = "var elem = document.createElement('img').style.transition = 'all 0.5s'; document.body.append(elem);";
+                typecount = 0;
+                typewriter4 = setInterval(function() {
+                  if (typecount<content.length) {
+                    fakeconsole.innerHTML+=content[typecount];
+                    typecount++;
+                  } else {
+                    clearInterval(typewriter4);
+                    fakeconsole.innerHTML+="<br>>";
+                    conselem = document.createElement('img');
+                    content = "elem.src='https://c.tenor.com/yheo1GGu3FwAAAAC/rick-roll-rick-ashley.gif';elem.style.cssText='top: calc(140vh + 30vmax + 10vmin);height:4vw;width:4vw;left:45vw;';";
+                    typecount = 0;
+                    typewriter5 = setInterval(function() {
+                      if (typecount<content.length) {
+                        fakeconsole.innerHTML+=content[typecount];
+                        typecount++;
+                      } else {
+                        clearInterval(typewriter5);
+                        fakeconsole.innerHTML+="<br>>";
+                        conselem.src = 'https://c.tenor.com/yheo1GGu3FwAAAAC/rick-roll-rick-ashley.gif';
+                        conselem.style.cssText='position: absolute;top: calc(140vh + 30vmax + 10vmin);height:4vw;width:4vw;left:45vw;transition: all 0.5s;z-index:1000;';
+                        document.getElementById("hobbies").append(conselem);
+                        content = "console.close();";
+                        typecount = 0;
+                        typewriter6 = setInterval(function() {
+                          if (typecount<content.length) {
+                            fakeconsole.innerHTML+=content[typecount];
+                            typecount++;
+                          } else {
+                            clearInterval(typewriter6);
+                            fakeconsole.innerHTML+="<br>>";
+                            setTimeout(function() {
+                              fakeconsole.innerHTML+="<span style='color:red'>signal: terminated</span>";
+                            }, 3000);
+                          }
+                        }, 50);
+                      }
+                    }, 50);
+                  }
+                }, 50);
+              }
+            }, 50);
           }
-          fakeconsole.innerHTML=consolerender;
-        }, 500);
+        }, 50);
       }
     }, 50);
 }
+
+setInterval(function() {
+  cursor.style.display = "none";
+  setTimeout(function() {
+    cursor.style.display = "inline";
+  }, 500);
+}, 1000);

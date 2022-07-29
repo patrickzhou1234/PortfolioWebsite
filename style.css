@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(0, 6, 85);
+    background-color: #03171f;
     overflow-x: hidden;
   }
   
@@ -691,14 +691,17 @@ html {
     }
   }
 
-  #fakeconsole {
+  #consoleoutside {
     position: absolute;
     width: 50vw;
     height: 50vh;
     left: 25vw;
+    background-color: white;
+    border: solid 1px white;
     top: calc(140vh + 30vmax + 10vmin);
+    transition: all 0.5s;
   }
 
-  #fakeconsole:focus {
+  #consoleoutside:focus {
     outline: none;
   }
