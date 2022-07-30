@@ -166,6 +166,7 @@ html {
     width: 80vw;
     height: 80vh;
     pointer-events: none;
+    opacity: 0;
   }
   
   #scrolldown1 {
@@ -773,4 +774,9 @@ html {
   #invisiblediv {
     width: 2vmax;
     height: 2vmax;
+  }
+
+  #textabout a {
+    pointer-events: all;
+    color: green;
   }
