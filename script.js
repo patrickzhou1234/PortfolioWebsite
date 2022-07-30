@@ -331,3 +331,19 @@ setInterval(function() {
     cursor.style.display = "inline";
   }, 500);
 }, 1000);
+
+$('#contactform').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        url: 'https://formspree.io/f/xvoypzee',
+        type: 'post',
+        data:$('#contactform').serialize(),
+    });
+    Swal.fire({
+        title: 'Done!',
+        text: 'You sent a message to me. ',
+        icon: 'success',
+        background: 'black',
+        color: 'white'
+    })
+});
