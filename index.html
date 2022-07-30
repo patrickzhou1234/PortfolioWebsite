@@ -102,8 +102,19 @@
       <div id="consoleoutside" readonly><span id="fakeconsole">></span><span id="cursor">|</span></div>
     </div>
     <vl id="break5"></vl>
-    <div>
-      
+    <div id="contactme">
+        <form id="contactform" method="POST">
+          <p>Contact me</p>
+          <p>Email</p>
+          <input autocomplete="off" type="email" placeholder="Email" name="Email" required></input>
+          <p>Discord</p>
+          <input autocomplete="off" type="text" placeholder="Discord" name="Discord"></input>
+          <p>Message</p>
+          <textarea placeholder="Type your message here" name="message" id="message" cols="200" rows="10"></textarea>
+          <br></br>
+          <input type="submit"></input>
+          <div id="invisiblediv"></div>
+        </form>
     </div>
     <script src="script.js"></script>
   </body>
