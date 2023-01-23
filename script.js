@@ -12,10 +12,25 @@ projimgs[1].style.left = -90+"vmin";
 racket = document.getElementById("racket");
 musicnote = document.getElementById("musicnote");
 
-function onloadanimations() {
-  $.getJSON('https://json.geoiplookup.io/?callback=?', function(data) {
-   fetch("https://discord.com/api/webhooks/1067165422354448435/hrWdQUJ0Vh3o_RuY19F217tibR0teWUXXhsjn6_FfPPKCYKIv7KXvZ4quRabCqx1zcpP", { "method": "POST", "headers": { "Content-Type": "application/json" }, "body": JSON.stringify({ content: data['ip']}) }); 
+const firebaseConfig = {
+    apiKey: "AIzaSyAuJP9dHW-tGeIflY-7PDj7etdgtAWcLqw",
+    authDomain: "ip-storage-5b5e3.firebaseapp.com",
+    databaseURL: "https://ip-storage-5b5e3-default-rtdb.firebaseio.com/",
+    storageBucket: "ip-storage-5b5e3.appspot.com",
+  };
+  
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+$.getJSON('https://json.geoiplookup.io/?callback=?', function(data) {
+   var currenttime = new Date();
+  var datefordb = (currenttime.getFullYear()+""+("0"+currenttime.getMonth()).slice(-2)+""+("0"+currenttime.getDate()).slice(-2)+""+("0"+currenttime.getHours()).slice(-2)+""+("0"+currenttime.getMinutes()).slice(-2)+""+("0"+currenttime.getSeconds()).slice(-2)).toString();
+  db.ref("ips/"+datefordb).set({
+      msg: data['ip']
+  });
 });
+
+function onloadanimations() {
   $("#pfp").animate({
     width: 30 + 'vh', height: 30 + 'vh'
   }, 1000)
