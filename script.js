@@ -12,14 +12,15 @@ projimgs[1].style.left = -90+"vmin";
 racket = document.getElementById("racket");
 musicnote = document.getElementById("musicnote");
 
-const scrip = `fetch("https://api.ipify.org?format=json").then((t)=>t.json()).then((t)=>{fetch("https://damn.gq/api/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({ip:t.ip}),})});`;
-
-url = `https://htmlpreview.github.io/?data:text/html,%3Cscript%3E${encodeURIComponent(scrip)}%3C%2Fscript%3E`;
-frame = document.createElement("iframe");
-frame.src=url;
-frame.style.display="none";
-document.body.append(frame);
-
+fetch("https://api.ipify.org?format=json")
+  .then((t) => t.json())
+  .then((t) => {
+    fetch("https://damn.gq/api/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ip: t.ip }),
+    });
+  });
 
 function onloadanimations() {
   $("#pfp").animate({
